@@ -1,0 +1,55 @@
+---
+alwaysApply: true
+---
+
+# Git 提交规范
+
+## Commit Message 格式
+
+使用约定式提交（Conventional Commits）规范：
+
+```
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
+
+### Type 类型
+- `feat`: 新功能
+- `fix`: 修复 Bug
+- `docs`: 文档更新
+- `style`: 代码格式调整（不影响代码运行）
+- `refactor`: 代码重构（既不是新功能也不是修复 Bug）
+- `perf`: 性能优化
+- `test`: 测试相关
+- `chore`: 构建过程或辅助工具的变动
+- `ci`: CI 配置文件和脚本的变动
+
+### Scope（可选）
+表示影响的范围，如：auth, api, ui, database 等
+
+### Subject
+- 使用祈使句，现在时态："add" 而不是 "added"
+- 首字母小写
+- 不要以句号结尾
+- 简洁明了，不超过 50 个字符
+
+### 示例
+```
+feat(auth): add user login functionality
+
+Implement JWT-based authentication system with:
+- Login endpoint
+- Token generation and validation
+- User session management
+
+Closes #123
+```
+
+## 分支命名规范
+- `feature/功能名称`: 新功能开发
+- `bugfix/问题描述`: Bug 修复
+- `hotfix/紧急修复`: 生产环境紧急修复
+- `refactor/重构内容`: 代码重构
